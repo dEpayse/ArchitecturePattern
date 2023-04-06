@@ -4,7 +4,7 @@ class Board {
     private val boardSize = 3
     private val cells = Array(boardSize) { Array(boardSize) { Cell() } }
 
-    private var winner : Player? = null
+    var winner : Player? = null; private set
     private var state = GameState.IN_PROGRESS
     private var currentTurnPlayer = Player.X
 
@@ -18,18 +18,21 @@ class Board {
         state = GameState.IN_PROGRESS
     }
 
-    fun mark(rowIdx: Int, colIdx: Int) {
+    fun mark(rowIdx: Int, colIdx: Int) : Player? {
+        var playerThatMoved : Player? = null
         if(isValid(rowIdx, colIdx)) {
             cells[rowIdx][colIdx].value = currentTurnPlayer
+            playerThatMoved = currentTurnPlayer
 
             if(isWinningMoveByPlayer(currentTurnPlayer, rowIdx, colIdx)) {
                 state = GameState.FINISHED
                 winner = currentTurnPlayer
-                return
+                return playerThatMoved
             }
 
             flipCurrentTurn()
         }
+        return playerThatMoved
     }
 
     private fun clearCells() {
@@ -48,6 +51,7 @@ class Board {
     }
 
     private fun isOutOfBounds(idx: Int) = idx < 0 || idx >= boardSize
+
     private fun isCellValueAlreadySet(rowIdx: Int, colIdx: Int) : Boolean = cells[rowIdx][colIdx].value != null
 
     private fun isWinningMoveByPlayer(player: Player, currentRowIdx: Int, currentColIdx: Int) : Boolean {
@@ -63,5 +67,4 @@ class Board {
             if(currentTurnPlayer == Player.X) Player.O
             else Player.X
     }
-
 }

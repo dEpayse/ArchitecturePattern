@@ -7,6 +7,6 @@ import com.depayse.architecturepattern.R
 class MVIActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mvi_activity)
+        setContentView(R.layout.activity_mvi)
     }
 }

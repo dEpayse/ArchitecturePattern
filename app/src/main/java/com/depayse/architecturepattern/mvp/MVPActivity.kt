@@ -7,6 +7,6 @@ import com.depayse.architecturepattern.R
 class MVPActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mvp_activity)
+        setContentView(R.layout.activity_mvp)
     }
 }
