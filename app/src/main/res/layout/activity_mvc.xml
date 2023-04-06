@@ -13,66 +13,22 @@
     <TableLayout
         android:id="@+id/table_board"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="3">
+        android:layout_height="wrap_content">
         <TableRow>
-            <Button
-                android:tag="00"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
+            <Button style="@style/tictactoebutton" />
+            <Button style="@style/tictactoebutton" />
 
-            <Button
-                android:tag="01"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
-
-            <Button
-                android:tag="02"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
+            <Button style="@style/tictactoebutton" />
         </TableRow>
         <TableRow>
-
-            <Button
-                android:tag="10"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
-
-            <Button
-                android:tag="11"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
-
-            <Button
-                android:tag="12"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
+            <Button style="@style/tictactoebutton" />
+            <Button style="@style/tictactoebutton" />
+            <Button style="@style/tictactoebutton" />
         </TableRow>
         <TableRow>
-            <Button
-                android:tag="20"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
-
-            <Button
-                android:tag="21"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
-
-            <Button
-                android:tag="22"
-                android:onClick="onCellClicked"
-                style="@style/tictactoebutton"
-                />
+            <Button style="@style/tictactoebutton" />
+            <Button style="@style/tictactoebutton" />
+            <Button style="@style/tictactoebutton" />
         </TableRow>
     </TableLayout>
 
@@ -93,7 +49,6 @@
             android:textSize="40sp"
             android:layout_margin="20dp"
             tools:text="X" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
