@@ -13,4 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "ArchitecturePattern"
-include ':app'
+include ':mvc'
+include ':mvp'
+include ':mvvm'
+include ':mvi'
