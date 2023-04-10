@@ -9,7 +9,7 @@
         android:theme="@style/Theme.ArchitecturePattern" >
 
         <activity
-            android:name=".MVPActivity"
+            android:name=".view.MVPActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
