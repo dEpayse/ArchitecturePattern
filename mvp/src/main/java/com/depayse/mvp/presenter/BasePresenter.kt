@@ -1,6 +1,6 @@
 package com.depayse.mvp.presenter
 
-interface Presenter {
+interface BasePresenter {
     fun onCreate()
     fun onPause()
     fun onResume()

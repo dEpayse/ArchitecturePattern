@@ -13,14 +13,18 @@ import com.depayse.mvc.databinding.ActivityMvcBinding
 import com.depayse.mvc.model.Board
 
 /**
- * Android 에서 MVC 를 구현할 때 Activity 가 Controller 가 된다.
+ * 본 프로젝트에서 MVC 를 구현할 때 Activity 를 Controller 로 했다
+ *
+ * Controller 는 Model 과 View 를 연결하는 역할을 한다.
  *
  * [MVCActivity]는 MVC 패턴에서 Controller 역할을 한다.
  *  ```
  *  ```
- * In android, Activity becomes Controller when implementing MVC Pattern.<br/><br/>
+ * Activity is used to Controller when implementing MVC Pattern in this project.
  *
- * [MVCActivity] is responsible for Controller in MVC Pattern.<br/><br/>
+ * Controller connects Model and View.
+ *
+ * [MVCActivity] is responsible for Controller in MVC Pattern.
  */
 class MVCActivity : AppCompatActivity() {
 
@@ -97,7 +101,7 @@ class MVCActivity : AppCompatActivity() {
      *
      * [onCellClicked] updates Model and View after user clicks a single cell.
      */
-    fun onCellClicked(v: View) {
+    private fun onCellClicked(v: View) {
         (v as? Button)?.let { button ->
             val tableRow = viewBinding.tableBoard.children.find { (it as? TableRow)?.children?.contains(v) == true } as? TableRow
             val rowIdx = viewBinding.tableBoard.indexOfChild(tableRow)
